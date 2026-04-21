@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;800;900&family=Roboto+Slab:wght@300;400;700&display=swap');
+
+/* Base Styles */
+body {
+    background-color: #0f172a;
+    color: #ffffff;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.font-serif {
+    font-family: 'Roboto Slab', serif;
+}
+
+.font-bebas, .font-display {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Animations (Replacements for Framer Motion) */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+
+/* Clip Path for "Get Quote" button slant */
+.clip-path-slant {
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* Mobile Menu Animation */
+#mobile-menu {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+}
+
+#mobile-menu.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* Text Outline */
+.text-outline {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+    color: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ef4444;
+}
+
+/* Corner Beam Animation */
+.corner-beam {
+    /* Base styles handled by utility classes in HTML for position/size */
+    pointer-events: none;
+}
+
+/* Base borders (dim) */
+.corner-beam::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 4px solid rgba(239, 68, 68, 0.2);
+    z-index: 1;
+}
+
+.corner-beam.top-left::before {
+    border-right: none;
+    border-bottom: none;
+}
+
+.corner-beam.bottom-right::before {
+    border-left: none;
+    border-top: none;
+}
+
+/* The travelling beam */
+.corner-beam::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    z-index: 2;
+}
+
+.corner-beam.top-left::after {
+    /* Top border (horizontal) and Left border (vertical) */
+    background: 
+        linear-gradient(90deg, transparent 0%, #ef4444 50%, transparent 100%) top / 200% 4px no-repeat,
+        linear-gradient(180deg, transparent 0%, #ef4444 50%, transparent 100%) left / 4px 200% no-repeat;
+    animation: beam-tl 4s linear infinite;
+}
+
+.corner-beam.bottom-right::after {
+    /* Bottom border (horizontal) and Right border (vertical) */
+    background: 
+        linear-gradient(270deg, transparent 0%, #ef4444 50%, transparent 100%) bottom / 200% 4px no-repeat,
+        linear-gradient(0deg, transparent 0%, #ef4444 50%, transparent 100%) right / 4px 200% no-repeat;
+    animation: beam-br 4s linear infinite;
+}
+
+@keyframes beam-tl {
+    0% { background-position: 100% 0, 0 100%; }
+    100% { background-position: -100% 0, 0 -100%; }
+}
+
+@keyframes beam-br {
+    0% { background-position: 100% 100%, 100% 100%; }
+    100% { background-position: -100% 100%, 100% -100%; }
+}
+
+/* Neon Border Beam Animation (Snake Effect) */
+.neon-border-box {
+    position: relative;
+    overflow: hidden;
+    background: rgba(24, 24, 27, 0.5); /* bg-bullet-900/50 */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+.neon-border-box:hover {
+    background: rgba(239, 68, 68, 0.1); /* Subtle red tint */
+}
+
+.neon-border-box span {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.neon-border-box:hover span {
+    opacity: 1;
+}
+
+/* Top */
+.neon-border-box span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ef4444);
+    animation: btn-anim1 6s linear infinite;
+}
+
+@keyframes btn-anim1 {
+    0% { left: -100%; }
+    50%, 100% { left: 100%; }
+}
+
+/* Right */
+.neon-border-box span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #ef4444);
+    animation: btn-anim2 6s linear infinite;
+    animation-delay: 1.5s;
+}
+
+@keyframes btn-anim2 {
+    0% { top: -100%; }
+    50%, 100% { top: 100%; }
+}
+
+/* Bottom */
+.neon-border-box span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #ef4444);
+    animation: btn-anim3 6s linear infinite;
+    animation-delay: 3s;
+}
+
+@keyframes btn-anim3 {
+    0% { right: -100%; }
+    50%, 100% { right: 100%; }
+}
+
+/* Left */
+.neon-border-box span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #ef4444);
+    animation: btn-anim4 6s linear infinite;
+    animation-delay: 4.5s;
+}
+
+@keyframes btn-anim4 {
+    0% { bottom: -100%; }
+    50%, 100% { bottom: 100%; }
+}
+
+/* Content wrapper */
+.neon-border-box > div, 
+.neon-border-box > h3, 
+.neon-border-box > p {
+    position: relative;
+    z-index: 2;
+}
+

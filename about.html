@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | 60+ Years of Construction Excellence | Bulletproof Construction</title>
+    <meta name="description" content="Family-owned and operated with over 60 years of experience. We handle everything from land acquisition to full build services with the Nation's best warranty.">
+    <meta property="og:title" content="About Us | 60+ Years of Construction Excellence | Bulletproof Construction">
+    <meta property="og:description" content="Family-owned and operated with over 60 years of experience. We handle everything from land acquisition to full build services with the Nation's best warranty.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bulletproofconstructionllc.com/about.html">
+    <meta property="og:image" content="https://bulletproofconstructionllc.com/wp-content/uploads/2025/10/logo-large-red-white.png">
+    <link rel="canonical" href="https://bulletproofconstructionllc.com/about.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Montserrat', 'sans-serif'],
+              serif: ['Roboto Slab', 'serif'],
+            },
+            colors: {
+              bullet: {
+                900: '#0f172a', // Deep slate
+                800: '#1e293b',
+                700: '#334155',
+                accent: '#ef4444', // Fiery Red
+                muted: '#94a3b8',
+              }
+            },
+            backgroundImage: {
+              'concrete': "url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2568&auto=format&fit=crop')",
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-bullet-900 text-white selection:bg-bullet-accent selection:text-black font-sans">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group cursor-pointer">
+                <img src="https://bulletproofconstructionllc.com/wp-content/uploads/2025/10/logo-large-red-white.png" 
+                     alt="Bulletproof Construction LLC"
+                     class="h-11 lg:h-[62px] w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center gap-8 font-semibold text-sm tracking-wide uppercase">
+                <a href="index.html" class="transition-colors hover:text-bullet-accent">Home</a>
+                <a href="about.html" class="transition-colors text-bullet-accent">About</a>
+                <a href="services.html" class="transition-colors hover:text-bullet-accent">Services</a>
+                <a href="contact.html" class="transition-colors hover:text-bullet-accent">Contact</a>
+                <a href="contact.html" class="bg-bullet-accent text-black px-6 py-2 font-bold hover:bg-white transition-colors clip-path-slant">Get Quote</a>
+            </div>
+
+            <!-- Mobile/Tablet Actions -->
+            <div class="flex items-center lg:hidden">
+                <a href="contact.html" class="hidden md:block bg-bullet-accent text-black px-6 py-2 font-bold hover:bg-white transition-colors clip-path-slant mr-[30px]">Get Quote</a>
+                <button id="menu-btn" class="text-white">
+                    <i id="menu-icon" data-lucide="menu" width="28" height="28"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 bg-bullet-900 pt-24 px-6 lg:hidden flex flex-col gap-8 items-center text-center">
+        <a href="index.html" class="text-2xl font-bold text-white">Home</a>
+        <a href="about.html" class="text-2xl font-bold text-bullet-accent">About</a>
+        <a href="services.html" class="text-2xl font-bold text-white">Services</a>
+        <a href="contact.html" class="text-2xl font-bold text-white">Contact</a>
+        <a href="contact.html" class="bg-bullet-accent text-black w-full py-4 text-xl font-bold mt-4">Get a Quote</a>
+    </div>
+
+    <!-- About Hero -->
+    <section class="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=2670&auto=format&fit=crop" 
+                 alt="Construction Team" 
+                 class="w-full h-full object-cover opacity-30 grayscale" />
+            <div class="absolute inset-0 bg-gradient-to-b from-bullet-900/90 via-bullet-900/60 to-bullet-900"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 pt-20 text-center animate-on-scroll">
+            <h2 class="text-bullet-accent font-bold tracking-[0.3em] uppercase mb-4 text-sm md:text-base">
+                Since 1964
+            </h2>
+            <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tighter text-white">
+                Our Legacy
+            </h1>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="py-24 bg-bullet-900 relative">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                
+                <!-- Text Content -->
+                <div class="animate-on-scroll">
+                    <h3 class="text-bullet-accent font-bold tracking-widest uppercase mb-4">Who We Are</h3>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+                        Building Trust.<br/>
+                        Forging <span class="relative whitespace-nowrap">
+                            Legacies
+                            <svg class="absolute -bottom-2 left-0 w-full h-3 text-bullet-accent" viewBox="0 0 100 10" preserveAspectRatio="none">
+                                <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="3" fill="none" />
+                            </svg>
+                        </span>.
+                    </h2>
+                    
+                    <div class="space-y-6 text-gray-300 font-serif text-lg leading-relaxed">
+                        <p>
+                            <strong class="text-white">Family owned & operated</strong> with over 
+                            <span class="text-bullet-accent font-bold"> 60+ years of experience</span> on our team. 
+                            We don't just build houses; we architect, design, and engineer your forever home from the ground up.
+                        </p>
+                        <p>
+                            Our philosophy is simple: <strong class="text-white">We Bulletproof homes.</strong> 
+                            This isn't just a catchy name—it's a promise. We hold the Nation’s best warranty on all work on select builds, 
+                            giving you peace of mind that your investment is protected for generations.
+                        </p>
+                        <p>
+                            Whether you have a design and need land, or have land and need a design, 
+                            we handle everything in-house.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-4 mt-12 border-t border-gray-800 pt-8">
+                        <div class="flex flex-col gap-2">
+                            <div class="text-bullet-accent mb-2"><i data-lucide="users" width="24" height="24"></i></div>
+                            <div class="font-bold text-xl md:text-2xl">60+ Years</div>
+                            <div class="text-xs uppercase tracking-wider text-gray-500">Experience</div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <div class="text-bullet-accent mb-2"><i data-lucide="shield" width="24" height="24"></i></div>
+                            <div class="font-bold text-xl md:text-2xl">Nation's Best</div>
+                            <div class="text-xs uppercase tracking-wider text-gray-500">Warranty</div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <div class="text-bullet-accent mb-2"><i data-lucide="ruler" width="24" height="24"></i></div>
+                            <div class="font-bold text-xl md:text-2xl">Full Build</div>
+                            <div class="text-xs uppercase tracking-wider text-gray-500">Service</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image composition -->
+                <div class="relative h-[600px] hidden md:block">
+                    <div class="absolute inset-0 bg-bullet-800 rounded-lg transform rotate-3"></div>
+                    <div class="absolute inset-0 bg-gray-900 rounded-lg overflow-hidden border border-gray-700 shadow-2xl transform -rotate-2 hover:rotate-0 transition-transform duration-500 animate-on-scroll">
+                        <img src="images/man_reviewing_construction_blueprints.jpg" 
+                             alt="Modern Architecture" 
+                             class="w-full h-full object-cover opacity-80" />
+                    </div>
+
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-6 -left-6 bg-bullet-accent text-black p-6 rounded shadow-lg max-w-[200px] animate-on-scroll delay-400">
+                        <p class="font-black text-4xl mb-1">100%</p>
+                        <p class="text-sm font-bold leading-tight">In-House Design & Engineering</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="py-24 bg-zinc-900 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 max-w-3xl mx-auto animate-on-scroll">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">
+                    The <span class="text-bullet-accent">Bulletproof</span> Standard
+                </h2>
+                <p class="text-gray-400 font-serif text-lg delay-200 animate-on-scroll">
+                    We don't cut corners. We reinforce them. Experience a seamless journey from concept to keys.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Value 1 -->
+                <div class="bg-bullet-800/50 backdrop-blur-sm border border-white/5 p-8 hover:border-bullet-accent/50 transition-colors group rounded-sm animate-on-scroll">
+                    <div class="mb-6 text-gray-400 group-hover:text-bullet-accent transition-colors">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="stroke-[1.5]">
+                            <path d="M24 8L6 42H42L24 8Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M24 16V42" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15 25H33" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="24" cy="8" r="3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Architect & Design</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed font-serif">We bring visions to life. From initial sketches to final blueprints, our in-house architects ensure your home is both beautiful and structurally sound.</p>
+                </div>
+                <!-- Value 2 -->
+                <div class="bg-bullet-800/50 backdrop-blur-sm border border-white/5 p-8 hover:border-bullet-accent/50 transition-colors group rounded-sm animate-on-scroll delay-100">
+                    <div class="mb-6 text-gray-400 group-hover:text-bullet-accent transition-colors">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="stroke-[1.5]">
+                            <path d="M10 38C10 38 16 34 24 34C32 34 38 38 38 38" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4 42H44" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M24 34V8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M24 8L38 13L24 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Land Acquisition</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed font-serif">Have a design but no land? We help you find the ideal plot. Have land? We make it work for your new build. Total flexibility.</p>
+                </div>
+                <!-- Value 3 -->
+                <div class="bg-bullet-800/50 backdrop-blur-sm border border-white/5 p-8 hover:border-bullet-accent/50 transition-colors group rounded-sm animate-on-scroll delay-200">
+                    <div class="mb-6 text-gray-400 group-hover:text-bullet-accent transition-colors">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="stroke-[1.5]">
+                            <rect x="8" y="16" width="32" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 24H40" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M24 16V32" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14 16L18 10H30L34 16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14 32L18 38H30L34 32" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="24" cy="24" r="3" stroke="currentColor" fill="none"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Precision Engineering</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed font-serif">We engineer from the ground up. Every beam, every joint, every foundation is calculated for maximum durability and longevity.</p>
+                </div>
+                <!-- Value 4 -->
+                <div class="bg-bullet-800/50 backdrop-blur-sm border border-white/5 p-8 hover:border-bullet-accent/50 transition-colors group rounded-sm animate-on-scroll delay-300">
+                    <div class="mb-6 text-gray-400 group-hover:text-bullet-accent transition-colors">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="stroke-[1.5]">
+                            <path d="M24 4L8 10V22C8 32.7 14.6 42.4 24 46C33.4 42.4 40 32.7 40 22V10L24 4Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M18 24L22 28L30 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Bulletproof Warranty</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed font-serif">We stand behind our work with the Nation’s best warranty on select builds. We don't just build homes; we secure your future.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Timeline -->
+    <section class="py-24 bg-bullet-900 relative">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-16">
+                
+                <!-- Sticky Header -->
+                <div class="md:w-1/3">
+                    <div class="sticky top-32">
+                        <h2 class="text-4xl md:text-6xl font-black uppercase text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-700 mb-6">
+                            Our<br/>Process
+                        </h2>
+                        <p class="text-gray-400 font-serif text-lg mb-8">
+                            A streamlined path to your forever home. We handle everything from the ground up in house.
+                        </p>
+                        <a href="contact.html" class="flex items-center gap-2 text-bullet-accent font-bold uppercase tracking-widest text-sm hover:gap-4 transition-all">
+                            Start Your Project <span class="text-xl">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Timeline -->
+                <div class="md:w-2/3 space-y-12 relative border-l border-gray-800 ml-4 md:ml-0 pl-8 md:pl-12">
+                    <div class="relative animate-on-scroll">
+                        <div class="absolute -left-[41px] md:-left-[57px] top-0 w-4 h-4 rounded-full bg-bullet-900 border-2 border-bullet-accent"></div>
+                        <span class="text-6xl font-black text-gray-800 absolute -top-4 -left-4 -z-10 opacity-50 select-none">01</span>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Discovery & Land</h3>
+                        <p class="text-gray-400 font-serif leading-relaxed max-w-md">Whether you have land or need it, we start by analyzing the terrain to ensure it supports your vision.</p>
+                    </div>
+                    <div class="relative animate-on-scroll delay-100">
+                        <div class="absolute -left-[41px] md:-left-[57px] top-0 w-4 h-4 rounded-full bg-bullet-900 border-2 border-bullet-accent"></div>
+                        <span class="text-6xl font-black text-gray-800 absolute -top-4 -left-4 -z-10 opacity-50 select-none">02</span>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Architecture & Design</h3>
+                        <p class="text-gray-400 font-serif leading-relaxed max-w-md">Our team drafts the blueprint of your forever home, balancing aesthetics with structural integrity.</p>
+                    </div>
+                    <div class="relative animate-on-scroll delay-200">
+                        <div class="absolute -left-[41px] md:-left-[57px] top-0 w-4 h-4 rounded-full bg-bullet-900 border-2 border-bullet-accent"></div>
+                        <span class="text-6xl font-black text-gray-800 absolute -top-4 -left-4 -z-10 opacity-50 select-none">03</span>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Engineering</h3>
+                        <p class="text-gray-400 font-serif leading-relaxed max-w-md">We calculate the load, stress, and materials needed to 'Bulletproof' the structure.</p>
+                    </div>
+                    <div class="relative animate-on-scroll delay-300">
+                        <div class="absolute -left-[41px] md:-left-[57px] top-0 w-4 h-4 rounded-full bg-bullet-900 border-2 border-bullet-accent"></div>
+                        <span class="text-6xl font-black text-gray-800 absolute -top-4 -left-4 -z-10 opacity-50 select-none">04</span>
+                        <h3 class="text-2xl font-bold mb-3 text-white">The Build</h3>
+                        <p class="text-gray-400 font-serif leading-relaxed max-w-md">Precision construction managed entirely in-house. No outsourcing critical structural components.</p>
+                    </div>
+                    <div class="relative animate-on-scroll delay-400">
+                        <div class="absolute -left-[41px] md:-left-[57px] top-0 w-4 h-4 rounded-full bg-bullet-900 border-2 border-bullet-accent"></div>
+                        <span class="text-6xl font-black text-gray-800 absolute -top-4 -left-4 -z-10 opacity-50 select-none">05</span>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Warranty Handover</h3>
+                        <p class="text-gray-400 font-serif leading-relaxed max-w-md">We hand over the keys along with the Nation's best warranty on select builds.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-32 relative overflow-hidden flex items-center justify-center">
+        <div class="absolute inset-0 bg-bullet-900">
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-bullet-900 via-bullet-800 to-bullet-900 opacity-90"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center animate-on-scroll">
+            <h2 class="text-4xl md:text-7xl font-black uppercase mb-6 leading-tight">
+                Ready to <span class="text-bullet-accent">Bulletproof</span><br />
+                Your Future?
+            </h2>
+            <p class="text-xl text-gray-400 font-serif max-w-2xl mx-auto mb-10">
+                Whether you need land, design, or a full build — we have the experience to get it done right.
+            </p>
+            <a href="contact.html" class="inline-block group relative px-12 py-4 bg-bullet-accent text-black font-black uppercase tracking-widest overflow-hidden">
+                <div class="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                <span class="relative z-10 group-hover:text-bullet-accent transition-colors">Start Your Project</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-16 border-t border-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div class="md:col-span-2">
+                    <img src="https://bulletproofconstructionllc.com/wp-content/uploads/2025/10/logo-large-red-white.png" 
+                         alt="Bulletproof Construction LLC"
+                         class="h-[60px] mb-6 object-contain" />
+                    <p class="text-gray-500 font-serif max-w-sm mb-8">
+                        Family owned & operated with over 60+ years of experience. 
+                        Architecting, designing, and engineering your forever home from the ground up.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center hover:bg-bullet-accent hover:text-black transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-bold uppercase tracking-widest mb-6 text-sm">Contact</h3>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" width="16" class="text-bullet-accent"></i>
+                            <span>+1 (309) 832-1899</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" width="16" class="text-bullet-accent"></i>
+                            <span>info@bulletproof.com</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="map-pin" width="16" class="text-bullet-accent"></i>
+                            <span>PO Box 2033, Ottawa, IL 61350</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold uppercase tracking-widest mb-6 text-sm">Links</h3>
+                    <ul class="space-y-4 text-gray-400 text-sm font-serif">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-900 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 uppercase tracking-wider">
+                <p>&copy; 2026 Bulletproof Construction LLC. All Rights Reserved.</p>
+                <p>Designed with Strength.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
